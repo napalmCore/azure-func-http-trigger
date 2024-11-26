@@ -30,6 +30,9 @@ stages:
       vmImage: $(vmImageName)
 
     steps:
+    - script: dir $(workingDirectory)
+      displayName: 'List files in working directory'
+
     - task: DotNetCoreCLI@2
       displayName: Build
       inputs:
