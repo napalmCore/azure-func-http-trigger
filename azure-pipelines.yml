@@ -32,6 +32,7 @@ stages:
     steps:
     - script: dir $(workingDirectory)
       displayName: 'List files in working directory'
+      failOnStderr: false
 
     - task: DotNetCoreCLI@2
       displayName: Build
